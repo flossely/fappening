@@ -9,15 +9,8 @@ if ($subAction == "tease") {
     } else {
         $subArousal = 1;
     }
-    if (file_exists($obj.'/arousal')) {
-        $objArousal = file_get_contents($obj.'/arousal');
-    } else {
-        $objArousal = 1;
-    }
-    $subRating += 2.5 * $subArousal;
-    $objRating += 2.5 * $objArousal;
-    $subScore += 69 * $subArousal;
-    $objScore += 69 * $objArousal;
+    $subRating += 10 * $subArousal;
+    $subScore += 20 * $subArousal;
     echo turnFormat($paradigm, $today) .
         " : " .
         $subModeSign .
@@ -25,13 +18,8 @@ if ($subAction == "tease") {
         "[" .
         $subRating .
         "] " .
-        $spacedictus[$lingua]["sex"] .
-        " " .
-        $objModeSign .
-        $obj .
-        "[" .
-        $objRating .
-        "] <br>";
+        $spacedictus[$lingua]["fap"] .
+        "<br>";
 } elseif ($subAction == "group") {
     if (file_exists($sub.'/arousal')) {
         $subArousal = file_get_contents($sub.'/arousal');
@@ -43,10 +31,10 @@ if ($subAction == "tease") {
     } else {
         $objArousal = 1;
     }
-    $subRating += 2.5 * $subArousal;
-    $objRating += 2.5 * $objArousal;
-    $subScore += 69 * $subArousal;
-    $objScore += 69 * $objArousal;
+    $subRating += 10 * $subArousal;
+    $objRating += 10 * $objArousal;
+    $subScore += 20 * $subArousal;
+    $objScore += 20 * $objArousal;
     echo turnFormat($paradigm, $today) .
         " : " .
         $subModeSign .
