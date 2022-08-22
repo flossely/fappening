@@ -11,13 +11,13 @@ if ($subAction == "tease") {
     }
     $subRating += 10 * $subArousal;
     $subScore += 20 * $subArousal;
-    echo turnFormat($paradigm, $today) .
+    echo $turnNum .
         " : " .
         $subModeSign .
         $sub .
         "[" .
         $subRating .
         "] " .
-        $spacedictus[$lingua]["fap"] .
+        $spacedictus[$proLingo]["fap"] .
         "<br>";
 }

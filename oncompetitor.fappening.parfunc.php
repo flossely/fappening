@@ -11,14 +11,14 @@ if ($subAction == "tease") {
     }
     $subRating += 10 * $subArousal;
     $subScore += 20 * $subArousal;
-    echo turnFormat($paradigm, $today) .
+    echo $turnNum .
         " : " .
         $subModeSign .
         $sub .
         "[" .
         $subRating .
         "] " .
-        $spacedictus[$lingua]["fap"] .
+        $spacedictus[$proLingo]["fap"] .
         "<br>";
 } elseif ($subAction == "group") {
     if (file_exists($sub.'/arousal')) {
@@ -35,14 +35,14 @@ if ($subAction == "tease") {
     $objRating += 10 * $objArousal;
     $subScore += 20 * $subArousal;
     $objScore += 20 * $objArousal;
-    echo turnFormat($paradigm, $today) .
+    echo $turnNum .
         " : " .
         $subModeSign .
         $sub .
         "[" .
         $subRating .
         "] " .
-        $spacedictus[$lingua]["sex"] .
+        $spacedictus[$proLingo]["sex"] .
         " " .
         $objModeSign .
         $obj .
