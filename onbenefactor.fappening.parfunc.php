@@ -1,16 +1,12 @@
 <?php
 
-$subActions = ['fap', 'group'];
+$subActions = ['sex'];
 $subActionCount = count($subActions);
 $subAction = $subActions[rand(0, $subActionCount - 1)];
-if ($subAction == "fap") {
-    $subRating += 2 * $subArousal;
-    $subScore += 2 * $subArousal;
-    echo $turnNum." : ".$subHalfNotation." ".$spacedictus[$proLingo]["fap"]."<br>";
-} elseif ($subAction == "group") {
-    $subRating += 10 * $objArousal;
-    $objRating += 10 * $subArousal;
-    $subScore += 20 * $subArousal;
-    $objScore += 20 * $objArousal;
-    echo $turnNum." : ".$subHalfNotation.' '.$spacedictus[$proLingo]["sex"]." ".$objHalfNotation."<br>";
+if ($subAction == "sex") {
+    $subRating += $subRating * $objArousal;
+    $objRating += $subRating * $subArousal;
+    $subScore += $subArousal;
+    $objScore += $objArousal;
+    echo $turnNum." : ".$subFullName.' '.$spacedictus[$proLingo]["sex"]." ".$objFullName."<br>";
 }
