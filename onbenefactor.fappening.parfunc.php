@@ -8,5 +8,5 @@ if ($subAction == "sex") {
     $objRating += $subRating * $subArousal;
     $subScore += $subArousal;
     $objScore += $objArousal;
-    echo $turnNum." : ".$subFullName.' '.$spacedictus[$proLingo]["sex"]." ".$objFullName."<br>";
+    echo $turnNum.' : '.$subFullName.' ('.$subRating.') '.$spacedictus[$proLingo]['sex'].' '.$objFullName.' ('.$objRating.')<br>';
 }
