@@ -96,9 +96,9 @@ $dataString = $_REQUEST['data'];
 $objMeta = parseGetData($dataString);
 
 if (isset($objMeta['branch'])) {
-    gitExecute('bitbucket.org', $add, $objMeta['branch'], 'webprofiler');
+    gitExecute('https://bitbucket.org', $add, $objMeta['branch'], 'webprofiler');
 } else {
-    gitExecute('bitbucket.org', $add, '', 'webprofiler');
+    gitExecute('https://bitbucket.org', $add, '', 'webprofiler');
 }
 
 if (!file_exists($add.'/coord')) {
