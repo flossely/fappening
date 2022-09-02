@@ -1,9 +1,10 @@
 <?php
 
-$subActions = ["pass"];
+$subActions = ["fap"];
 $subActionCount = count($subActions);
 $subAction = $subActions[rand(0, $subActionCount - 1)];
-
-if ($subAction == "pass") {
-    echo $turnNum." : ".$subFullName.' '.$spacedictus[$proLingo]["pass"]."<br>";
+if ($subAction == "fap") {
+    $subRating += $subArousal;
+    $subScore += $subArousal;
+    echo $turnNum.' : '.$subFullName.' ('.$subRating.') '.$spacedictus[$proLingo]['fap'].'<br>';
 }
