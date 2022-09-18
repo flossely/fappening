@@ -1,5 +1,9 @@
 <?php
 
+function compareModes($s, $o) {
+    return abs($s - $o);
+}
+
 if (file_get_contents($sub.'/arousal')) {
     $subArousalFile = file_get_contents($sub.'/arousal');
     if (is_numeric($subArousalFile)) {
@@ -20,3 +24,5 @@ if (file_get_contents($obj.'/arousal')) {
 } else {
     $objArousal = 1;
 }
+
+$coeffe = compareModes($subMode, $objMode);
