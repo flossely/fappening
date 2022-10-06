@@ -150,3 +150,7 @@ if (!file_exists($add.'/born')) {
 file_put_contents($add.'/locale', $lingua);
 chmod($add.'/locale', 0777);
 intoZone($add);
+
+if (isset($meta['item'])) {
+    gitPerform('https://github.com', 'thingy', 'main', 'wholemarket', $meta['item'].'.item.obj', $add, $meta['item'].'.item.obj');
+}
