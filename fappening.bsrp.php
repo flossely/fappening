@@ -120,9 +120,9 @@ $data = $_REQUEST['data'];
 $meta = parseGetData($data);
 
 if (isset($meta['branch'])) {
-    gitExecute('https://bitbucket.org', $add, $meta['branch'], 'webprofiler');
+    gitExecute('https://bitbucket.org', $add, $meta['branch'], 'eroto');
 } else {
-    gitExecute('https://bitbucket.org', $add, '', 'webprofiler');
+    gitExecute('https://bitbucket.org', $add, '', 'eroto');
 }
 
 if (!file_exists($add.'/coord')) {
