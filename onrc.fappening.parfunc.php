@@ -6,5 +6,5 @@ $subAction = $subActions[rand(0, $subActionCount - 1)];
 if ($subAction == "sex") {
     $subRating += $objArousal * $objModeDiff;
     $objScore += $objArousal;
-    echo $turnNum.' : '.$subFullName.' ('.$subRating.') '.$spacedictus[$proLingo]['sex'].' '.$objFullName.' ('.$objRating.')<br>';
+    echo $turnNum.' : '.$subFullName.' ('.$subRating.') '.$diction[$proLingo]['action']['666'].' '.$objFullName.' ('.$objRating.')<br>';
 }
